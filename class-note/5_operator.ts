@@ -27,8 +27,14 @@ interface Person {
     age: number;
 }
 
-function askSomeone(someone: Developer | Person) {
+
+function askSomeone(someone: Developer & Person) {
+    someone.age;
     someone.name;
     someone.skill;
-    someone.age;
 }
+
+superDeveloper({name:"김성준", skill:"이런"})
+askSomeone({name:"test1", skill:"test2", age:12})
+
+
