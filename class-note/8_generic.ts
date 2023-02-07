@@ -37,3 +37,13 @@ const str = logText<string>('abc');
 str.split('');
 
 const login = logText<boolean>(true);
+
+interface Dropdown<T> {
+    value: T;
+    selected: boolean;
+}
+
+const obj: Dropdown<string> = {
+    value: '123',
+    selected: false
+}
